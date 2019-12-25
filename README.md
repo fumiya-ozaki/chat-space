@@ -48,7 +48,7 @@ Things you may want to cover:
 - belongs_to :groups
 
 
-##groupsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|varchar|null: false, foreign_key: false|

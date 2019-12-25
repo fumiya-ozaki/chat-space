@@ -26,20 +26,20 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|varchar|null: false, foreign_key: false|
-|email|varchar|null: false, foreign_key: false|
-|password|varchar|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
+|email|string|null: false, foreign_key: false|
+|password|string|null: false, foreign_key: false|
 
 ### Association
-- hasmany :comments
-- hasmany :groups
-- hasmany :groups_users,through: :groups_users
+- has_many :comments
+- has_many :groups,through: :groups_users
+- has_many :groups_users
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|value|varchar|null: false, foreign_key: false|
-|picture|varchar|null: false, foreign_key: false|
+|value|string|null: false, foreign_key: false|
+|picture|string|null: false, foreign_key: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -51,13 +51,13 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|varchar|null: false, foreign_key: false|
-|user_id|integer|null: false, foreign_key: true|
+|group_name|string|null: false, foreign_key: false|
+
 
 ### Association
-- hasmany :users, through: :groups_users
-- hasmany :comments
-- hasmany :groups_users
+- has_many :users, through: :groups_users
+- has_many :comments
+- has_many :groups_users
 
 
 ## groups_usersテーブル

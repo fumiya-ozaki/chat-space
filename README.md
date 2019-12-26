@@ -26,9 +26,9 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: false|
-|email|string|null: false, foreign_key: false|
-|password|string|null: false, foreign_key: false|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false,|
 
 ### Association
 - has_many :comments
@@ -38,8 +38,8 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment|string|foreign_key: false|
-|image|string|foreign_key: false|
+|comment|string|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -51,7 +51,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: false|
+|name|string|null: false|
 
 
 ### Association

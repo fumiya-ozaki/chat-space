@@ -38,8 +38,8 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|value|string|null: false, foreign_key: false|
-|picture|string|null: false, foreign_key: false|
+|comment|string|foreign_key: false|
+|image|string|foreign_key: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
@@ -51,7 +51,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
 
 
 ### Association

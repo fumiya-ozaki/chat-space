@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+$font-color: #ffffff;
 
 .wrapper{
 display: flex;
@@ -18,7 +19,7 @@ display: flex;
        display: flex;
        justify-content: space-between;
        &__user-name{
-         color: #ffffff;
+         color: $font-color;
          line-height: 20px;
          font-size: 16px;
          font-weight: bold;
@@ -26,13 +27,13 @@ display: flex;
        &__user-edit{
          line-height: 20px;
          .left-top__user-box__group-create{
-           color: #ffffff;
+           color:$font-color;
            text-decoration: none;
            margin-right: 5px;
            font-size: 13px;
          }
          .left-top__user-box__profile-edit{
-           color: #ffffff;
+           color: $font-color;
            text-decoration: none;
            font-size: 13px;
          }
@@ -50,11 +51,11 @@ display: flex;
        &__group-name{
          font-size: 15px;
          padding: 0 0 5px 0;
-         color: #ffffff;
+         color: $font-color;
        }
        &__message_latest{
          font-size: 11px;
-         color: #ffffff;
+         color: $font-color;
        }
      }
    }
@@ -63,7 +64,7 @@ display: flex;
  .right-contents{
    width: calc(100vw - 300px);
    .right-top{
-     background-color: #ffffff;
+     background-color: $font-color;
      border-bottom: solid #eeeeee 1px;
      height: 100px;
      display: flex;
@@ -163,7 +164,7 @@ display: flex;
        border: none;
        &_a{
          text-decoration: none;
-         color: white; 
+         color:$font-color; 
         }
  
      } 

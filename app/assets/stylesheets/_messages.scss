@@ -23,9 +23,11 @@ display: flex;
          line-height: 20px;
          font-size: 16px;
          font-weight: bold;
-       }
-       &__user-edit{
-         line-height: 20px;
+        }
+        &__user-edit{
+          display: flex;
+          line-height: 20px;
+
          .left-top__user-box__group-create{
            color:$font-color;
            text-decoration: none;

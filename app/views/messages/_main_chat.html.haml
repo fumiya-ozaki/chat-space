@@ -1,0 +1,39 @@
+.right-contents
+  .right-top
+    .right-top__group-box
+      .right-top__group-box__group-name
+        techcamp
+      .right-top__group-box__member-list
+        Member:masa
+
+    .right-top__edit-btn
+      = link_to "Edit" ,"####", class: "group-edit-btn"
+      
+  .chat-mainbox
+    .chat-topic
+      .chat-topic__box
+        .chat-topic__box__messenger
+          masa
+        .chat-topic__box__year_time
+          2019/11/20(Wed)17:43:01
+      .chat-topic__message
+        おはよう！
+    .chat-topic
+      .chat-topic__box
+        .chat-topic__box__messenger
+          masa
+        .chat-topic__box__year_time
+          2019/11/20(Wed)17:43:01
+      .chat-topic__message
+        おはよう！
+      
+
+  .send-form
+    .text-box
+      %input.text-box__input{placeholder:  "type a message", type: "text"}/
+      %label.text-box__input__image{class: "text-box__input__image"}
+        = icon('fas', 'image')
+        %input.text-box__input__image__file{type: "file"}
+    .send-btn
+      = link_to "Send" ,"#####", class: "send-btn_a"
+ 

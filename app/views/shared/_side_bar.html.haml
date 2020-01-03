@@ -5,22 +5,21 @@
         = current_user.name
       %ul.left-top__user-box__user-edit
         %li.left-top__user-box__group-create
-          =link_to do
+          =link_to new_group_path do
             = icon('fa', 'edit', class: 'left-top__user-box__group-create')
         %li.left-top__user-box__profile-edit
-          =link_to do
+          =link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'left-top__user-box__profile-edit')
   .left-main
-    .select-group
-      .select-group__group-name
-        techcamp
-      .select-group__message_latest
-        まだメッセージがありません
-    .select-group
-      .select-group__group-name
-        techcamp
-      .select-group__message_latest
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .select-group
+        =link_to '#' do
+          .select-group__group-name
+            = group.name
+          .select-group__message_latest
+            メッセージはまだありません
+        
+    
 
     
 

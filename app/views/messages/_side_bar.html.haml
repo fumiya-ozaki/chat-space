@@ -1,13 +1,15 @@
 .left-contents
   .left-top
     .left-top__user-box
-      .left-top__user-box__user-name
-        masa
-      .left-top__user-box__user-edit
-        =link_to "#", class: "left-top__user-box__group-create" do
-          = icon('fa', 'edit')
-        =link_to "#", class: "left-top__user-box__profile-edit" do
-          = icon('fas', 'cog')
+      %h3.left-top__user-box__user-name
+        = current_user.name
+      %ul.left-top__user-box__user-edit
+        %li.left-top__user-box__group-create
+          =link_to do
+            = icon('fa', 'edit', class: 'left-top__user-box__group-create')
+        %li.left-top__user-box__profile-edit
+          =link_to do
+            = icon('fas', 'cog', class: 'left-top__user-box__profile-edit')
   .left-main
     .select-group
       .select-group__group-name

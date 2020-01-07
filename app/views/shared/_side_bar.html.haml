@@ -13,11 +13,11 @@
   .left-main
     - current_user.groups.each do |group|
       .select-group
-        =link_to '#' do
+        =link_to group_messages_path(group), class: 'link' do
           .select-group__group-name
             = group.name
           .select-group__message_latest
-            メッセージはまだありません
+            = group.show_last_message
         
     
 

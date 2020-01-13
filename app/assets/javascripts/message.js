@@ -1,53 +1,53 @@
 $(function(){
   var buildHTML = function(message) {
     if (message.content && message.image) {
-      var html = `<div class = "chat-topic" data-message-id=` + message.id + `>` +
-      `<div class="chat-topic__box">` +
-          `<div class="chat-topic__box__messenger">` +
-              message.user_name +
-          `</div>` +
-          `<div class="chat-topic__box__year_time">` +
-              message.created_at +
-          `</div>` +
-      `</div>` +
-          `<div class="lower-message">` +
-            `<p class="lower-message__content">` +
-              message.content +
-            `</p>` +
-            `<img src="` + message.image + `" class="lower-message__image" >` +
-          `</div>` +
-      `</div>`
+      var html = `<div class = "chat-topic" data-message-id=` + message.id + `>
+      <div class="chat-topic__box">
+          <div class="chat-topic__box__messenger">`
+             + message.user_name +
+          `</div>
+          <div class="chat-topic__box__year_time">`
+             + message.created_at +
+          `</div>
+      </div>
+          <div class="lower-message">
+            <p class="lower-message__content">`
+             + message.content +
+            `</p>
+            <img src="` + message.image + `" class="lower-message__image" > 
+          </div>
+      </div>`
             
     } else if (message.content) {
-      var html = `<div class = "chat-topic" data-message-id=` + message.id + `>` +
-      `<div class="chat-topic__box">` +
-        `<div class="chat-topic__box__messenger">` +
+      var html = `<div class = "chat-topic" data-message-id=`+ message.id +`>
+      <div class="chat-topic__box">
+        <div class="chat-topic__box__messenger">` +
             message.user_name +
-        `</div>` +
-        `<div class="chat-topic__box__year_time">` +
+        `</div>
+        <div class="chat-topic__box__year_time">`+
             message.created_at +
-        `</div>` +
-      `</div>` +
-        `<div class="lower-message">` +
-          `<p class="lower-message__content">` +
+        `</div>
+      </div>
+        <div class="lower-message">
+          <p class="lower-message__content">`+
             message.content +
-          `</p>` +
-        `</div>` +
-      `</div>`    
+          `</p>
+        </div>
+      </div>`    
     } else if (message.image) {
-      var html = `<div class = "chat-topic" data-message-id=` + message.id + `>` +
-      `<div class="chat-topic__box">` +
-        `<div class="chat-topic__box__messenger">` +
-            message.user_name +
-        `</div>` +
-        `<div class="chat-topic__box__year_time">` +
-            message.created_at +
-        `</div>` +
-      `</div>` +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`    
+      var html = `<div class = "chat-topic" data-message-id=` + message.id + `>
+      <div class="chat-topic__box">
+        <div class="chat-topic__box__messenger">` 
+           + message.user_name +
+        `</div>
+        <div class="chat-topic__box__year_time">` 
+          + message.created_at +
+        `</div>
+      </div>
+        <div class="lower-message">
+          <img src="` + message.image + `" class="lower-message__image" >
+        </div>
+      </div>`    
     };
     return html;
   };
@@ -97,7 +97,7 @@ $(function(){
       }
     })
     .fail(function(){
-      console.log('error');
+      console.log("メッセージ送信に失敗しました");
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)){

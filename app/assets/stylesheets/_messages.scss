@@ -48,6 +48,7 @@ display: flex;
      background-color: #2f3e51;
      height: calc(100vh - 100px);
      padding:20px ;
+     overflow: scroll;
      .select-group{
        margin: 0 0 40px 0;
        &__group-name{

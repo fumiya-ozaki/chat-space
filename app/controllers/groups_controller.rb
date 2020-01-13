@@ -19,7 +19,6 @@ class GroupsController < ApplicationController
   end
 
   def update
-    # binding.pry
     if @group.update(group_params)
       redirect_to group_messages_path(@group),  notice: 'グループを更新しました'
     else
@@ -32,7 +31,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, user_ids: [] )
     params.require(:group).permit(:name, user_ids: [] )
   end
 

@@ -4,8 +4,9 @@
       .right-top__group-box__group-name
         = @group.name
       .right-top__group-box__member-list
+        member
         - @group.group_users.each do |group_user|
-          = "member: " + group_user.user.name     
+          =group_user.user.name     
 
     .right-top__edit-btn
       = link_to "Edit" , edit_group_path(@group) , class: "group-edit-btn"
